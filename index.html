@@ -22,15 +22,44 @@
           <th>Params \ Tech Choices</th>
           <th>Flutter</th>
           <th>React Native</th>
+          <th>Ionic</th>
+           <th>Native script</th>
+           <th>Xamarin</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th>Performance</th>
-          <td style="background-color: green">Great</td>
-          <td style="background-color: greenyellow">Better</td>
-        </tr>
+      <tbody id='tableBody'>
+       
       </tbody>
     </table>
+    <script >
+        var comparision=[
+        {param:'Performance',flutter:'Great',reactNative:'Better',ionic:'good',nativeScript:'avg', xamrin:'avg'},
+        {param:'Code',flutter:'Dart',reactNative:'React/JS',ionic:'HTML/CSS/JS',nativeScript:'JS', xamrin:'C#'},
+        {param:'Compilation',flutter:'Arm',reactNative:'partly compiled to native',ionic:'webview',nativeScript:'partly compiled to native', xamrin:'C#'},
+        {param:'Portability',flutter:'iOS/Android/web',reactNative:'iOS/Android/ Web(with reactNative-web)',ionic:'iOS/Android/ Web',nativeScript:'iOS/Android', xamrin:'iOS/Android'},
+        {param:'Popularity',flutter:'5',reactNative:'5',ionic:'4',nativeScript:'3', xamrin:'2'},
+        {param:'UI Components',flutter:'Built in',reactNative:'need to create/third party',ionic:'built in',nativeScript:'need to create/third party', xamrin:'built in'},
+        {param:'github stars',flutter:'Native feels',reactNative:'Native feel',ionic:'no',nativeScript:'native', xamrin:'native'},
+        {param:'Native touch',flutter:'117k',reactNative:'94.5k',ionic:'43.3k',nativeScript:'19.9k', xamrin:'5k'},
+     ]
+        
+         var tableBody = document.getElementById("tableBody");
+        comparision.forEach((item,index)=>{
+          var row = tableBody.insertRow(index);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          var cell4 = row.insertCell(3);
+          var cell5 = row.insertCell(4);
+          var cell6 = row.insertCell(5);
+          cell1.innerHTML = item.param;
+          cell2.innerHTML =  item.flutter;
+          cell3.innerHTML =  item.reactNative;
+          cell4.innerHTML =  item.ionic;
+          cell5.innerHTML =  item.nativeScript;
+          cell6.innerHTML =  item.xamrin;
+        })
+    </script>
   </body>
+
 </html>
